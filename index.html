@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Langley Fields | Private dog field hire</title>
+<meta name="description" content="Langley Fields is a fully fenced private dog field you book by the hour. One booking at a time, £10 an hour, open every day from sunrise to sunset.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
+<style>
+:root{
+  --ink:#17261C; --muted:#31453A; --soft:#4A5A4F;
+  --green:#1F5A3A; --green-dark:#143D27; --sage:#A9C79A; --tint:#E6EFE4;
+  --sun:#F2B632; --bg:#F6F8F3; --card:#FFFFFF; --line:#D5DFD3;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+h1,h2,h3{font-family:"Space Grotesk",system-ui,sans-serif;text-wrap:balance}
+a{color:var(--green)}
+a:hover{color:var(--green-dark)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--sun);color:var(--ink);padding:12px 16px;z-index:10}
+.skip:focus{left:8px;top:8px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{scroll-margin-top:16px}
+.band{padding:72px 0}
+.white{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+h2{margin:0;font-size:36px;line-height:1.15}
+.lede{margin:8px 0 0;font-size:17px;color:var(--muted);max-width:640px}
+.head{margin-bottom:32px;max-width:680px}
+
+/* nav */
+header{background:var(--card);border-bottom:1px solid var(--line)}
+.nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 32px;padding-top:16px;padding-bottom:16px}
+.logo{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:22px;color:var(--green);text-decoration:none}
+nav{display:flex;flex-wrap:wrap;align-items:center;gap:4px 24px;font-size:15px;font-weight:500}
+nav a{color:var(--ink);text-decoration:none;padding:10px 0}
+.btn{display:inline-block;text-decoration:none;font-weight:600;border-radius:8px;padding:14px 24px;min-height:44px;text-align:center}
+.btn-sun{background:var(--sun);color:var(--ink)}
+.btn-sun:hover{background:#E3A720;color:var(--ink)}
+.btn-green{background:var(--green);color:#fff;font-size:17px;padding:16px 28px}
+.btn-green:hover{background:var(--green-dark);color:#fff}
+nav a.btn{color:var(--ink);padding:12px 20px}
+
+/* hero */
+.hero{background:var(--tint)}
+.hero .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:40px;padding-top:64px;padding-bottom:64px}
+.hero .copy{flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:20px}
+.hero .art{flex:1 1 360px;min-width:0}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
+h1{margin:0;font-size:56px;line-height:1.05;font-weight:700}
+.hero p{margin:0;font-size:19px;max-width:520px;color:var(--muted)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.actions .link{font-weight:600;font-size:17px;padding:16px 8px}
+.price-line{font-weight:500;color:var(--muted)}
+.art svg{width:100%;height:auto;display:block;border-radius:12px}
+
+/* facts */
+.facts{background:var(--green);color:#fff}
+.facts .wrap{display:flex;flex-wrap:wrap;gap:20px 32px;padding-top:28px;padding-bottom:28px}
+.facts div.f{flex:1 1 220px;min-width:0}
+.facts strong{display:block;font-family:"Space Grotesk",sans-serif;font-size:18px}
+.facts span{font-size:15px;opacity:.92}
+
+/* cards */
+.grid{display:flex;flex-wrap:wrap;gap:16px;padding:0;margin:0;list-style:none}
+.grid>li{min-width:0}
+.step{flex:1 1 190px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:10px}
+.step .n{width:36px;height:36px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600}
+.step h3{margin:0;font-size:18px}
+.step p{margin:0;font-size:15px;color:var(--muted)}
+.feat{flex:1 1 240px;display:flex;gap:14px;align-items:flex-start;background:var(--bg);border-radius:12px;padding:18px}
+.feat svg{flex:none;margin-top:2px}
+.feat b{display:block}
+.feat span{font-size:15px;color:var(--muted)}
+.who{flex:1 1 300px;background:var(--tint);border-radius:12px;padding:24px}
+.who h3{margin:0 0 6px;font-size:20px}
+.who p{margin:0;color:var(--muted)}
+.rule{flex:1 1 320px;background:var(--bg);border-radius:12px;padding:20px}
+.rule b{display:block;margin-bottom:4px}
+.rule span{font-size:15px;color:var(--muted)}
+
+/* pricing */
+.pricing{display:flex;flex-wrap:wrap;gap:40px}
+.pricing>div{flex:1 1 360px;min-width:0}
+.pricing ul{margin:16px 0 0;padding-left:20px;color:var(--muted)}
+.pricing li{margin-bottom:6px}
+.calc{background:var(--tint);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:20px}
+.hours{display:flex;flex-wrap:wrap;gap:10px}
+.hours button{min-height:48px;padding:0 20px;border-radius:8px;font:600 16px Inter,sans-serif;border:2px solid var(--green);background:#fff;color:var(--green);cursor:pointer}
+.hours button[aria-pressed="true"]{background:var(--green);color:#fff}
+.total{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px}
+.total strong{font-family:"Space Grotesk",sans-serif;font-size:56px;line-height:1}
+.total span{color:var(--muted)}
+
+/* daylight */
+.chartbox{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:20px}
+.bars{display:flex;flex-wrap:wrap;gap:8px;align-items:flex-end;min-height:200px}
+.bars button{flex:1 1 56px;min-width:44px;border:0;background:transparent;padding:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:6px;font:500 13px Inter,sans-serif;color:var(--soft);cursor:pointer}
+.bars .v{font-weight:600}
+.bars .bar{display:block;width:100%;max-width:40px;border-radius:6px 6px 0 0;background:var(--sage)}
+.bars button[aria-pressed="true"] .bar{background:var(--green)}
+.bars button[aria-pressed="true"] .m{font-weight:700;color:var(--ink)}
+.selbox{background:var(--tint);border-radius:12px;padding:16px 20px;font-size:17px}
+.note{font-size:13px;color:var(--soft)}
+
+/* faq */
+.narrow{max-width:800px}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:12px}
+summary{font-weight:600;font-size:17px;cursor:pointer}
+details p{margin:12px 0 0;color:var(--muted)}
+
+/* book */
+.book{background:var(--green);color:#fff}
+.book .wrap{display:flex;flex-wrap:wrap;gap:40px;align-items:center;padding-top:72px;padding-bottom:72px}
+.book .l{flex:1 1 400px;min-width:0;display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+.book h2{font-size:40px;line-height:1.1}
+.book p{margin:0;font-size:18px;opacity:.95}
+.book .contact{flex:1 1 320px;min-width:0;background:rgba(255,255,255,.12);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:10px}
+.book .contact h3{margin:0;font-size:20px}
+
+footer{background:var(--ink);color:var(--line);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between;padding-top:28px;padding-bottom:28px}
+
+@media (max-width:640px){
+  h1{font-size:40px}
+  h2{font-size:30px}
+  .band{padding:56px 0}
+  .book h2{font-size:32px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+<div class="wrap nav">
+<a class="logo" href="#top">Langley Fields</a>
+<nav aria-label="Main">
+<a href="#how">How it works</a>
+<a href="#field">The field</a>
+<a href="#pricing">Pricing</a>
+<a href="#daylight">Opening hours</a>
+<a href="#rules">Field rules</a>
+<a href="#faq">FAQs</a>
+<a class="btn btn-sun book-link" href="#book">Book a slot</a>
+</nav>
+</div>
+</header>
+
+<main id="main">
+
+<section id="top" class="hero">
+<div class="wrap">
+<div class="copy">
+<div class="eyebrow">Private dog field hire</div>
+<h1>The whole field. Just you and your dog.</h1>
+<p>A fully fenced private field you book by the hour. One booking at a time, so your dog can run, train and relax with no other dogs around.</p>
+<div class="actions">
+<a class="btn btn-green book-link" href="#book">Book a slot</a>
+<a class="link" href="#how">See how it works</a>
+</div>
+<div class="price-line">£10 an hour. Open every day, sunrise to sunset.</div>
+</div>
+<div class="art">
+<svg viewBox="0 0 480 360" role="img" aria-label="Illustration of a fenced green field under a morning sun">
+<rect width="480" height="360" fill="#DCEBEF"/>
+<circle cx="372" cy="96" r="40" fill="#F2B632"/>
+<path d="M0 200 Q120 150 240 190 T480 170 L480 360 L0 360 Z" fill="#A9C79A"/>
+<path d="M0 250 Q160 215 300 245 T480 235 L480 360 L0 360 Z" fill="#4C8A57"/>
+<rect x="24" y="268" width="432" height="6" fill="#F6F8F3"/>
+<rect x="24" y="296" width="432" height="6" fill="#F6F8F3"/>
+<rect x="40" y="250" width="10" height="76" fill="#F6F8F3"/>
+<rect x="120" y="250" width="10" height="76" fill="#F6F8F3"/>
+<rect x="200" y="250" width="10" height="76" fill="#F6F8F3"/>
+<rect x="280" y="250" width="10" height="76" fill="#F6F8F3"/>
+<rect x="360" y="250" width="10" height="76" fill="#F6F8F3"/>
+<rect x="440" y="250" width="10" height="76" fill="#F6F8F3"/>
+</svg>
+</div>
+</div>
+</section>
+
+<div class="facts">
+<div class="wrap">
+<div class="f"><strong>1.8m secure fencing</strong><span>Dig-guard along the base</span></div>
+<div class="f"><strong>Double-gate airlock</strong><span>A second gate before the field</span></div>
+<div class="f"><strong>One booking at a time</strong><span>Nobody else on the field</span></div>
+<div class="f"><strong>Keypad lock and CCTV</strong><span>Your slot, your code</span></div>
+</div>
+</div>
+
+<section id="how" class="band">
+<div class="wrap">
+<div class="head">
+<h2>How it works</h2>
+<p class="lede">Five steps from booking to leaving. Everything is on your phone.</p>
+</div>
+<ol class="grid">
+<li class="step"><div class="n">1</div><h3>Pick a slot</h3><p>Choose a date, a time and how long you need.</p></li>
+<li class="step"><div class="n">2</div><h3>Pay online</h3><p>Pay by card. Your booking is confirmed by email.</p></li>
+<li class="step"><div class="n">3</div><h3>Get your code</h3><p>You receive a gate code that works for your slot only.</p></li>
+<li class="step"><div class="n">4</div><h3>Enter the field</h3><p>Park up, go through both gates and close them behind you.</p></li>
+<li class="step"><div class="n">5</div><h3>Play, then leave</h3><p>Enjoy your hour. Clean up and leave before the next slot.</p></li>
+</ol>
+</div>
+</section>
+
+<section id="field" class="band white">
+<div class="wrap">
+<div class="head">
+<h2>Built to keep dogs in and everyone else out</h2>
+<p class="lede">Safe for nervous, reactive and escape-minded dogs.</p>
+</div>
+<ul class="grid" id="features"></ul>
+</div>
+</section>
+
+<section class="band">
+<div class="wrap">
+<div class="head"><h2>Who books the field</h2></div>
+<ul class="grid">
+<li class="who"><h3>Reactive and anxious dogs</h3><p>Calm space with no surprises around the corner.</p></li>
+<li class="who"><h3>Rescues and new adopters</h3><p>Safe off-lead time while recall is a work in progress.</p></li>
+<li class="who"><h3>Trainers and behaviourists</h3><p>A private space for one-to-one sessions.</p></li>
+<li class="who"><h3>Puppy owners</h3><p>Controlled socialising and first off-lead runs.</p></li>
+<li class="who"><h3>Busy owners and dog walkers</h3><p>Proper exercise in an hour, safe and secure.</p></li>
+<li class="who"><h3>Regulars</h3><p>Weekly and daily slots, booked once and repeated.</p></li>
+</ul>
+</div>
+</section>
+
+<section id="pricing" class="band white">
+<div class="wrap pricing">
+<div>
+<h2>One price, every hour</h2>
+<p class="lede">£10 an hour for the whole field. No joining fee, no hidden extras. Pick how many hours you want and see the total.</p>
+<ul>
+<li>The price covers the whole field for your slot</li>
+<li>Book one-off or repeat the same slot every week</li>
+<li>Pay by card when you book</li>
+</ul>
+</div>
+<div class="calc">
+<div style="font-weight:600" id="hours-label">How long do you need?</div>
+<div class="hours" role="group" aria-labelledby="hours-label" id="hours"></div>
+<div class="total"><strong id="total">£10</strong><span id="total-note">for 1 hour on the whole field</span></div>
+<a class="btn btn-green book-link" href="#book">Book this slot</a>
+</div>
+</div>
+</section>
+
+<section id="daylight" class="band">
+<div class="wrap">
+<div class="head">
+<h2>Open every day, sunrise to sunset</h2>
+<p class="lede">The field opens in daylight so everyone can see their dog. Opening hours change through the year. Select a month to see how much time you can book.</p>
+</div>
+<div class="chartbox">
+<div class="bars" id="bars" role="group" aria-label="Daylight hours by month"></div>
+<div class="selbox" id="selbox" aria-live="polite"></div>
+<div class="note">Hours are daily averages of sunrise to sunset for a site at about 52.7°N. Exact opening times are shown when you book.</div>
+</div>
+</div>
+</section>
+
+<section id="rules" class="band white">
+<div class="wrap">
+<div class="head"><h2>Field rules</h2></div>
+<ul class="grid">
+<li class="rule"><b>Close both gates, every time</b><span>Shut the first gate behind you before opening the second. Do the same on the way out.</span></li>
+<li class="rule"><b>Clean up after your dog</b><span>Pick up and use the dog waste bin. Fill any holes your dog digs.</span></li>
+<li class="rule"><b>Vaccinated, healthy dogs only</b><span>Please keep dogs in season or unwell at home.</span></li>
+<li class="rule"><b>Stay with your dog</b><span>Keep your dogs within sight. Children must be supervised.</span></li>
+<li class="rule"><b>Leave on time</b><span>Another booking may follow yours. Please be out before your slot ends.</span></li>
+<li class="rule"><b>Keep your code private</b><span>Your gate code works only for your slot. Please do not share it.</span></li>
+</ul>
+</div>
+</section>
+
+<section id="faq" class="band">
+<div class="wrap narrow">
+<div class="head"><h2>Questions</h2></div>
+<details><summary>Can I really have the field to myself?</summary><p>Yes. Only one booking runs at a time, so nobody else is on the field during your slot.</p></details>
+<details><summary>How many dogs can I bring?</summary><p>[SET YOUR LIMIT] dogs per booking. Tell us how many dogs are coming when you book.</p></details>
+<details><summary>How secure is the fencing?</summary><p>The field has 1.8m fencing with a dig-guard along the base, and an airlock of two gates at the entrance so a dog can never go straight from the field to outside.</p></details>
+<details><summary>How do I get in?</summary><p>After you book, you receive a code for the keypad padlock. It works for your slot only.</p></details>
+<details><summary>Is there water and parking?</summary><p>Yes. There is a water tank with bowls and a parking area by the gate. Seating is provided.</p></details>
+<details><summary>What if the weather is bad?</summary><p>The field stays open in rain. If the ground becomes unsafe, we close it and contact you to rebook your slot at no cost.</p></details>
+<details><summary>Can I cancel or change my booking?</summary><p>[SET YOUR CANCELLATION POLICY]. Message us as early as you can and we will do our best to help.</p></details>
+</div>
+</section>
+
+<section id="book" class="book">
+<div class="wrap">
+<div class="l">
+<h2>Book your private hour</h2>
+<p>Choose your date and time, pay by card, and your gate code arrives by email.</p>
+<a class="btn btn-sun book-link" href="#book" style="font-size:17px;padding:16px 32px">Choose a time</a>
+</div>
+<div class="contact">
+<h3>Get in touch</h3>
+<div>Email: [YOUR EMAIL]</div>
+<div>Phone: [YOUR PHONE NUMBER]</div>
+<div>Find us: [YOUR FIELD ADDRESS]</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="wrap">
+<div>Langley Fields. Private dog field hire.</div>
+<div>Terms, privacy policy and cancellation policy: [ADD LINKS]</div>
+</div>
+</footer>
+
+<script>
+/* 1. Paste your booking page address between the quotes, e.g. "https://your-booking-tool.com/langley-fields" */
+var BOOKING_URL = "";
+
+(function () {
+  if (BOOKING_URL) {
+    document.querySelectorAll(".book-link").forEach(function (a) {
+      a.setAttribute("href", BOOKING_URL);
+      a.setAttribute("target", "_blank");
+      a.setAttribute("rel", "noopener");
+    });
+  }
+
+  /* Field features */
+  var features = [
+    ["1.8m perimeter fence", "Tall, secure netting all the way round."],
+    ["Dig-guard base", "Pegged along the bottom so dogs cannot dig out."],
+    ["Double-gate airlock", "Two gates at the entrance keep escapes out of the question."],
+    ["Keypad padlock", "A fresh code for each booking."],
+    ["CCTV on site", "Battery-powered camera for security."],
+    ["Water for dogs", "A refillable tank with bowls to hand."],
+    ["Parking by the gate", "A stone parking area close to the entrance."],
+    ["Seating", "Somewhere to sit while your dog runs."]
+  ];
+  var tick = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1F5A3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>';
+  var fl = document.getElementById("features");
+  features.forEach(function (f) {
+    var li = document.createElement("li");
+    li.className = "feat";
+    li.innerHTML = tick + "<div><b></b><span></span></div>";
+    li.querySelector("b").textContent = f[0];
+    li.querySelector("span").textContent = f[1];
+    fl.appendChild(li);
+  });
+
+  /* Price calculator: change PRICE_PER_HOUR if your price changes */
+  var PRICE_PER_HOUR = 10;
+  var hoursEl = document.getElementById("hours");
+  var totalEl = document.getElementById("total");
+  var noteEl = document.getElementById("total-note");
+  function setHours(n) {
+    totalEl.textContent = "£" + (n * PRICE_PER_HOUR);
+    noteEl.textContent = "for " + (n === 1 ? "1 hour" : n + " hours") + " on the whole field";
+    hoursEl.querySelectorAll("button").forEach(function (b) {
+      b.setAttribute("aria-pressed", String(Number(b.dataset.h) === n));
+    });
+  }
+  [1, 2, 3, 4].forEach(function (n) {
+    var b = document.createElement("button");
+    b.type = "button";
+    b.dataset.h = n;
+    b.textContent = n === 1 ? "1 hour" : n + " hours";
+    b.addEventListener("click", function () { setHours(n); });
+    hoursEl.appendChild(b);
+  });
+  setHours(1);
+
+  /* Daylight chart */
+  var short = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  var long = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var daylight = [8.2, 9.8, 11.8, 13.9, 15.7, 16.8, 16.3, 14.7, 12.7, 10.7, 8.8, 7.7];
+  var barsEl = document.getElementById("bars");
+  var selEl = document.getElementById("selbox");
+  function setMonth(i) {
+    barsEl.querySelectorAll("button").forEach(function (b, j) {
+      b.setAttribute("aria-pressed", String(i === j));
+    });
+    var d = daylight[i];
+    selEl.innerHTML = "<strong>" + long[i] + ":</strong> about " + d.toFixed(1) +
+      " hours of daylight a day, which is " + Math.floor(d) + " one-hour slots from sunrise to sunset.";
+  }
+  daylight.forEach(function (d, i) {
+    var b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("aria-label", long[i] + ", " + d.toFixed(1) + " hours of daylight");
+    b.innerHTML = '<span class="v">' + d.toFixed(1) + '</span><span class="bar" style="height:' +
+      Math.round(d / 17 * 150) + 'px"></span><span class="m">' + short[i] + "</span>";
+    b.addEventListener("click", function () { setMonth(i); });
+    barsEl.appendChild(b);
+  });
+  setMonth(5);
+})();
+</script>
+</body>
+</html>
